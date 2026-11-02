@@ -2,3 +2,4 @@
 
 <!-- Members -->
 Mindi Hu (mh2637)
+Jennifer Wu (xjw2) 
