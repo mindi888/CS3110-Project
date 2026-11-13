@@ -1,0 +1,38 @@
+[
+    {"name": "Scallion Chicken",
+    "flavor": "savory",
+    "restrictions" : ["meat","poultry"],
+    "cooking_time_min": 35,
+    "servings": 4, 
+    "ingredients": {
+        "Chicken":[
+            { "item": "Chicken Thighs", "amount": 4},
+            { "item": "Ginger", "amount": 2, "unit": "pieces" },
+            { "item": "Spring Onions", "amount": 2, "unit": "pieces" },
+            { "item": " Jujube Dates", "amount": 5 }
+        ],
+        "sauce": [
+             { "item": "Ginger", "amount": 1, "unit": "piece"},
+             { "item": "Spring Onions", "amount": 4, "unit": "pieces"},
+             { "item": "Chili Flakes", "amount": 1, "unit": "TBSP" },
+             { "item": "Soy Sauce", "amount": 2, "unit": "TBSP" },
+             { "item": "Sugar", "amount": 1, "unit": "TBSP" },
+             { "item": "Salt", "amount": 1, "unit": "TBSP" },
+             { "item": "Oyster Sauce", "amount": 1, "unit": "TBSP" },
+             { "item": "Oil", "amount": 0.25, "unit": "Cups" }
+        ]
+    },
+     "directions": [
+        "Place a large bowl with a smaller bowl upside down in the middle",
+        "Slice up Ginger into large pieces and Spring Onion into ~3in pieces",
+        "Place chicken, ginger, onion and dates into the bowl",
+        "Steam Chicken for 25 minutes",
+        "Once done, Pull chicken out and shred. Keep the chicken stock in the bowl",
+        "Slice up the ginger into small cubes and spring onions into small bits",
+        "Place ginger, spring oinions, chili flakes, soy sauce, sugar, oyster sauce into bowl", 
+        "Heat up oil until 325°F and pour over mixure",
+        "Add saved chicken stock into the bowl, mix, and add salt and sugar to taste",
+        "Add shreded chicken and mix",
+        "Serve with rice or plain"
+     ]}
+]
