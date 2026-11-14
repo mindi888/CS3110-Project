@@ -9,7 +9,7 @@
             { "item": "Chicken Thighs", "amount": 4, "unit": "pieces"},
             { "item": "Ginger", "amount": 2, "unit": "pieces" },
             { "item": "Spring Onions", "amount": 2, "unit": "pieces" },
-            { "item": " Jujube Dates", "amount": 5, "unit": "pieces"}
+            { "item": "Jujube Dates", "amount": 5, "unit": "pieces"}
         ],
         "sauce": [
              { "item": "Ginger", "amount": 1, "unit": "piece"},
@@ -29,10 +29,10 @@
         "Steam Chicken for 25 minutes",
         "Once done, Pull chicken out and shred. Keep the chicken stock in the bowl",
         "Slice up the ginger into small cubes and spring onions into small bits",
-        "Place ginger, spring oinions, chili flakes, soy sauce, sugar, oyster sauce into bowl", 
-        "Heat up oil until 325°F and pour over mixure",
+        "Place ginger, spring onions, chili flakes, soy sauce, sugar, oyster sauce into bowl", 
+        "Heat up oil until 325°F and pour over mixture",
         "Add saved chicken stock into the bowl, mix, and add salt and sugar to taste",
-        "Add shreded chicken and mix",
+        "Add shredded chicken and mix",
         "Serve with rice or plain"
      ]}
 ]
