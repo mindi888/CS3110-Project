@@ -6,10 +6,10 @@
     "servings": 4, 
     "ingredients": {
         "Chicken":[
-            { "item": "Chicken Thighs", "amount": 4},
+            { "item": "Chicken Thighs", "amount": 4, "unit": "pieces"},
             { "item": "Ginger", "amount": 2, "unit": "pieces" },
             { "item": "Spring Onions", "amount": 2, "unit": "pieces" },
-            { "item": " Jujube Dates", "amount": 5 }
+            { "item": " Jujube Dates", "amount": 5, "unit": "pieces"}
         ],
         "sauce": [
              { "item": "Ginger", "amount": 1, "unit": "piece"},
