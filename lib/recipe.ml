@@ -23,9 +23,8 @@ ing
   {item= x |> member "item" |> to_string;
   amount = x |> member "amount" |> to_number;
   unit = x |> member "unit" |> to_string}) i))
-  
-let create s =
-  let json = Yojson.Basic.from_file s in
+
+let create json = 
   {
     name = json |> member "name" |> to_string;
     flavor = json |> member "flavor" |> to_string;
@@ -36,7 +35,9 @@ let create s =
     directions = json |> member "directions" |> to_list |> List.map to_string
   }
 
-(*let get_name r = r.name let get_flavor r = r.flavor let get_restrict r =
-  List.fold_left (fun acc s -> acc ^ ", " ^ s) "" r.restricts
-
-  let cook_time r = r.cook_time let servings r = r.servings*)
+let get_name r = r.name 
+let get_flavor r = r.flavor 
+let get_restrict r =
+  String.concat ", " r.restricts
+let cook_time r = r.cook_time 
+let servings r = r.servings
