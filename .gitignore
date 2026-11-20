@@ -1,0 +1,19 @@
+# Dune build output
+_build/
+*.install
+
+# Local opam switch (MS2 says not to submit these)
+_opam/
+
+# Compiled files, in case someone compiles outside Dune
+*.cmi
+*.cmo
+*.cmx
+*.cmt
+*.cmti
+*.o
+*.so
+
+# Mac and editor clutter
+.DS_Store
+.vscode/
