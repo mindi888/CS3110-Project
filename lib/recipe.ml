@@ -16,15 +16,21 @@ type recipe = {
   directions : string list;
 }
 
-let parse_ingredients ing = 
-ing
+let parse_ingredients ing =
+  ing
   |> List.map (fun (g, i) -> (g, i |> to_list))
-  |> List.map (fun (g,i) -> (g, List.map (fun x -> 
-  {item= x |> member "item" |> to_string;
-  amount = x |> member "amount" |> to_number;
-  unit = x |> member "unit" |> to_string}) i))
+  |> List.map (fun (g, i) ->
+      ( g,
+        List.map
+          (fun x ->
+            {
+              item = x |> member "item" |> to_string;
+              amount = x |> member "amount" |> to_number;
+              unit = x |> member "unit" |> to_string;
+            })
+          i ))
 
-let create json = 
+let create json =
   {
     name = json |> member "name" |> to_string;
     flavor = json |> member "flavor" |> to_string;
@@ -32,12 +38,11 @@ let create json =
     cook_time = json |> member "cooking_time_min" |> to_int;
     servings = json |> member "servings" |> to_int;
     ingredients = json |> member "ingredients" |> to_assoc |> parse_ingredients;
-    directions = json |> member "directions" |> to_list |> List.map to_string
+    directions = json |> member "directions" |> to_list |> List.map to_string;
   }
 
-let get_name r = r.name 
-let get_flavor r = r.flavor 
-let get_restrict r =
-  String.concat ", " r.restricts
-let cook_time r = r.cook_time 
+let get_name r = r.name
+let get_flavor r = r.flavor
+let get_restrict r = r.restricts
+let cook_time r = r.cook_time
 let servings r = r.servings
