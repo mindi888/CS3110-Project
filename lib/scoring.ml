@@ -36,7 +36,7 @@ let filter responses recipes =
 let score_flavor resp_flavor rec_flavor =
   match resp_flavor, rec_flavor with
   | Answers.Either, _ -> (1, "Matches preferred flavor")
-  | Answers.Sweet, Recipe.Sweet | Answers.Savory, Recipe.Savory -> (1, "Matches preferred flavor")
+  | Answers.Sweet, "sweet" | Answers.Savory, "savory" -> (1, "Matches preferred flavor")
   | Answers.Sweet, _ | Answers.Savory, _ -> (0, "Does not match preferred flavor")
 (** [score_flavor resp_flavor rec_flavor] compares [resp_flavor] and [rec_flavor], returning a numerical score and reason for the score. *)
 
@@ -47,7 +47,7 @@ let score_time resp_time rec_time =
 
 let score_and_explain responses recipe =
   let (flavor_score, flavor_reason) = score_flavor (Answers.get_flavor responses) (Recipe.get_flavor recipe) in
-  let (time_score, time_reason) = score_time (Answers.get_time responses) (Recipe.get_time recipe) in
+  let (time_score, time_reason) = score_time (Answers.get_time responses) (Recipe.cook_time recipe) in
   {recipe = recipe; score = flavor_score + time_score; reason = flavor_reason ^ ", " ^ time_reason}
 (** [score_and_explain responses recipe] tabulates the score for a single [recipe] against the user's [responses], returning a scored_recipe with the recipe and scoring information. For MS2, each category contributes a binary score of 0 or 1 to signal if the recipe meets the requirement, but MS3 may expand beyond this. *)
 
