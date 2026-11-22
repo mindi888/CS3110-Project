@@ -22,6 +22,8 @@ let labels options = List.map (fun (label, _) -> label) options
 let parse options label = List.assoc label options
 
 (* getting the multiple options the user selected *)
+(* NOTE: If user selects None of the above, then the display must uncheck 
+previously checked options *)
 let parse_multiple options label = List.concat_map (parse options) label
 
 (* QUESTIONS *)
