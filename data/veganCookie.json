@@ -1,0 +1,31 @@
+ {"name" : "Vegan Raspberry Cookies",
+    "flavor": "sweet",
+    "allergens" : ["gluten"],
+    "restrictions": ["kosher", "vegan", "vegatarian"],
+    "cooking_time_min": 90,
+    "servings": 9, 
+    "ingredients": {
+        "dough": [{ "item": "vegan butter", "amount": 0.5, "unit": "Cup" }, 
+        { "item": "cane sugar", "amount": 0.66, "unit": "Cup" },
+        { "item": "lemon zest", "amount": 2.5, "unit": "TSP" },
+        { "item": "ground flaxseed", "amount": 1, "unit": "TBSP" },
+        { "item": "water", "amount": 3, "unit": "TBSP" },
+        { "item": "vanilla bean paste", "amount": 1, "unit": "TSP" },
+        { "item": "all purpose flour", "amount": 1, "unit": "Cup" },
+        { "item": "salt", "amount": 0.25, "unit": "TSP" },
+        { "item": "baking powder", "amount": 0.5, "unit": "TSP" }],
+        "mix-ins": [{ "item": "FROZEN chopped raspberries", "amount": 6, "unit": "TBSP" }]
+    },
+    "directions":
+    ["Mix flaxseed and water and set aside for at least 5 min until thickened",
+    "Add butter, sugar and lemon zest into a bowl until light and fluffy",
+    "Whip flax egg and vanilla into butter-sugar mixture",
+    "Add flour, baking powder, and salt. Mix until thick and slightly sticky",
+    "Add frozen chopped raspberries and using a spatula, fold into the cookie dough",
+    "Wrap bowl with plastic wrap and put into fridge to chill for 1 hr",
+    "Line a baking sheet with parchment paper and preheat oven for 350° F",
+    "Take dough out of the fridge. Use cookie scoop (~2 TBSP) into 9 cookie dough balls. Place the balls about 2 inches apart on the tray",
+    "Bake the cookies for 13-15 min until bottoms are lightly browned",
+    "Remove the cookies from the oven and let cool on baking sheet for 5 min"
+]
+    }

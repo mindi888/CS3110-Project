@@ -1,0 +1,22 @@
+{"name": "Fried Rice PLACEHOLDER",
+    "flavor": "savory",
+    "allergens" : ["gluten", "shellfish", "soy"],
+    "restrictions": ["halal"],
+    "cooking_time_min": 35,
+    "servings": 4, 
+    "ingredients": {
+        "Optional Meat":[
+            { "item": "Chicken Thighs", "amount": 4, "unit": ""}
+        ],
+        "Rice": [
+             { "item": "Ginger", "amount": 1, "unit": "piece"},
+             { "item": "Spring Onions", "amount": 4, "unit": ""},
+             { "item": "Chili Flakes", "amount": 1, "unit": "TBSP" },
+             { "item": "Soy Sauce", "amount": 2, "unit": "TBSP" },
+             { "item": "Sugar", "amount": 1, "unit": "TBSP" },
+             { "item": "Salt", "amount": 1, "unit": "TBSP" },
+             { "item": "Oyster Sauce", "amount": 1, "unit": "TBSP" },
+             { "item": "Oil", "amount": 0.25, "unit": "Cups" }
+        ]
+    },
+     "directions": []}
