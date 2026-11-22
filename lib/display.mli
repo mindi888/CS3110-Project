@@ -7,7 +7,7 @@ val welcome : unit -> unit
     their answers bundled together.
     If the user types something invalid, it asks again until they get it
     right. If they press Ctrl-D, the program exits. *)
-val collect_answers : unit -> allergens:string list -> Answers.answers
+val collect_answers : unit -> Answers.answers
 
 (** [show_recipe_names rs] prints a numbered list of the recipe names in
     [rs]. If the list is empty, it prints "No recipes matched" instead. *)

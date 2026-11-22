@@ -82,13 +82,14 @@ let rec ask_restart () =
       | _ ->
           print_endline "Please type y or n.";
           ask_restart ())
-          
+
 let collect_answers () =
+  let allergens = ask_multi Questions.allergens_q Answers.allergens_options in
   let flavor = ask_single Questions.flavor_q Answers.flavor_options in
   let restrict = ask_multi Questions.restrict_q Answers.restrict_options in
   let time = ask_single Questions.time_q Answers.time_options in
   let serving = ask_single Questions.serving_q Answers.serving_options in
-  Answers.make ~flavor ~restrict ~time ~serving
+  Answers.make ~flavor ~restrict ~time ~serving ~allergens
 
 (* Temporary: names only, since Recipe exposes only get_name for now. *)
 let show_recipe_names rs =
