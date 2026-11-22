@@ -41,8 +41,16 @@ let create json =
     directions = json |> member "directions" |> to_list |> List.map to_string;
   }
 
+let load_all dir =
+  Sys.readdir dir |> Array.to_list
+  |> List.map (Filename.concat dir)
+  |> List.map Yojson.Basic.from_file
+  |> List.map create
+
 let get_name r = r.name
 let get_flavor r = r.flavor
 let get_restrict r = r.restricts
 let cook_time r = r.cook_time
 let servings r = r.servings
+let get_ing r = r.ingredients
+let get_directions r = r.directions
