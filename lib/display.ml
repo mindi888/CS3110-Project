@@ -70,6 +70,19 @@ let rec ask_multi q options =
         ask_multi q options
       end
 
+let rec ask_restart () =
+  print_string "Start over? (y/n): ";
+  flush stdout;
+  match read_line_opt () with
+  | None -> false
+  | Some s -> (
+      match String.lowercase_ascii s with
+      | "y" | "yes" -> true
+      | "n" | "no" -> false
+      | _ ->
+          print_endline "Please type y or n.";
+          ask_restart ())
+          
 let collect_answers () =
   let flavor = ask_single Questions.flavor_q Answers.flavor_options in
   let restrict = ask_multi Questions.restrict_q Answers.restrict_options in

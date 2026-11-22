@@ -1,7 +1,11 @@
 open Recipebook
 
+let rec run recipes =
+  let answers = Display.collect_answers () in
+  Display.show_recipe_names (Scoring.filter answers recipes);
+  if Display.ask_restart () then run recipes
+  else print_endline "Happy cooking!"
+
 let () =
   Display.welcome ();
-  let answers = Display.collect_answers () in
-  let recipes = Recipe.load_all "data" in
-  Display.show_recipe_names (Scoring.filter answers recipes)
+  run (Recipe.load_all "data")

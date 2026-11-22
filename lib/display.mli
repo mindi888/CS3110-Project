@@ -12,3 +12,7 @@ val collect_answers : unit -> Answers.answers
 (** [show_recipe_names rs] prints a numbered list of the recipe names in
     [rs]. If the list is empty, it prints "No recipes matched" instead. *)
 val show_recipe_names : Recipe.recipe list -> unit
+
+(** [ask_restart ()] asks "Start over?" and returns [true] for yes, [false]
+    for no. It keeps asking until the user types y or n. *)
+val ask_restart : unit -> bool
