@@ -5,7 +5,7 @@
     "servings": 8, 
     "ingredients": {
         "Cheese Sauce": [
-            { "item": "carrot", "amount": 1, "unit": "small" },
+            { "item": "carrot", "amount": 1, "unit": "" },
             { "item": "yukon gold potatoes", "amount":0.5, "unit": "lbs" },
             { "item": "raw cashews", "amount": 0.75, "unit": "Cup" },
             { "item": "water", "amount": 2, "unit": "Cup" },
