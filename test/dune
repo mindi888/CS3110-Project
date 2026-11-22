@@ -1,0 +1,5 @@
+(test
+ (name test_recipes)
+ (libraries ounit2 recipebook)
+ (deps
+  (source_tree ../data)))
