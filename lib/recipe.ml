@@ -9,6 +9,7 @@ type ingredient = {
 type recipe = {
   name : string;
   flavor : string;
+  allergens: string list;
   restricts : string list;
   cook_time : int;
   servings : int;
@@ -34,6 +35,7 @@ let create json =
   {
     name = json |> member "name" |> to_string;
     flavor = json |> member "flavor" |> to_string;
+    allergens = json |> member "allergens" |> to_list |> List.map to_string;
     restricts = json |> member "restrictions" |> to_list |> List.map to_string;
     cook_time = json |> member "cooking_time_min" |> to_int;
     servings = json |> member "servings" |> to_int;
@@ -51,6 +53,7 @@ let load_all dir =
 let get_name r = r.name
 let get_flavor r = r.flavor
 let get_restrict r = r.restricts
+let get_allergens r = r.allergens
 let cook_time r = r.cook_time
 let servings r = r.servings
 let get_ing r = r.ingredients

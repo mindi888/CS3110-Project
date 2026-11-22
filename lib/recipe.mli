@@ -25,8 +25,12 @@ val get_name : recipe -> string
 val get_flavor : recipe -> string
 (** [get_flavor r] returns the flavor of the recipe [r], sweet or savory*)
 
+val get_allergens : recipe -> string list
+(** [get_allergens r] returns a list of food allergens that are contianed in the recipe
+    [r] *)
+
 val get_restrict : recipe -> string list
-(** [get_restrict r] returns a list ofs the dietary restrictions of the recipe
+(** [get_restrict r] returns a list of religious/deitary restrictions rules it meets in recipe
     [r] *)
 
 val cook_time : recipe -> int
