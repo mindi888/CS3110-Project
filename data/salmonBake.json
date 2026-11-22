@@ -13,6 +13,7 @@
         ],
         "Salmon":[
             { "item": "Salmon", "amount": 8, "unit": "Oz" },
+            { "item": "Oil", "amount": 2, "unit": "TBSP" },
             { "item": "Garlic Powder", "amount": 1, "unit": "TBSP" },
             { "item": "Paprika Powder", "amount": 1, "unit": "TBSP" },
             { "item": "Onion Powder", "amount": 1, "unit": "TBSP" },
