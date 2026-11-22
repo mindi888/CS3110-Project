@@ -43,7 +43,8 @@ let create json =
 
 let load_all dir =
   Sys.readdir dir |> Array.to_list
-  |> List.map (Filename.concat dir)
+  |> List.filter (fun f -> Filename.check_suffix f ".json")
+  |> List.map (fun f -> Filename.concat dir f)
   |> List.map Yojson.Basic.from_file
   |> List.map create
 
