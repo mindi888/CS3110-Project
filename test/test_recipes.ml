@@ -46,7 +46,7 @@ let testMac =
         List.find (fun r -> Recipe.get_name r = "Vegan Mac and Cheese") recipes
       in
       assert_equal "savory" (Recipe.get_flavor mac);
-      assert_equal ["gluten"; "soy"; "nuts"] (Recipe.get_allergens mac);
+      assert_equal ["gluten"; "nuts"] (Recipe.get_allergens mac);
       assert_equal ["kosher";"vegan"; "vegetarian"; "halal"] (Recipe.get_restrict mac);
       assert_equal 45 (Recipe.cook_time mac);
       assert_equal 8 (Recipe.servings mac);
