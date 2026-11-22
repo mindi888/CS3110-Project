@@ -1,5 +1,5 @@
 (tests
- (names test_recipes test_recipebook)
+ (names test_recipebook test_recipes test_questions_answers)
  (libraries ounit2 recipebook)
  (deps
   (source_tree ../data)))
