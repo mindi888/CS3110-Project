@@ -35,6 +35,13 @@ let flavor_q =
     style = Buttons;
   }
 
+let allergens_q =
+  {
+    prompt = "Do you have any allergies?";
+    choices = labels Answers.allergens_options;
+    style = Checkboxes;
+  }
+
 let restrict_q =
   {
     prompt = "Do you have any dietary restrictions?";
@@ -56,11 +63,12 @@ let serving_q =
     style = Dropdown;
   }
 
-let questions = [ flavor_q; restrict_q; time_q; serving_q ]
+let questions = [ flavor_q; allergens_q; restrict_q; time_q; serving_q ]
 
-let to_answers ~flavor ~restrict ~time ~serving =
+let to_answers ~flavor ~allergens ~restrict ~time ~serving =
   Answers.make
     ~flavor:(parse Answers.flavor_options flavor)
+    ~allergens:(parse_multiple Answers.allergens_options allergens)
     ~restrict:(parse_multiple Answers.restrict_options restrict)
     ~time:(parse Answers.time_options time)
     ~serving:(parse Answers.serving_options serving)

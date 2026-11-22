@@ -17,11 +17,21 @@ let flavor_options =
     ("Savory", Savory);
     ("No preference", Either) ]
 
-let restrict_options =
+let allergens_options =
   [ ("Gluten", [ "gluten" ]);
     ("Dairy", [ "dairy" ]);
-    ("Meat", [ "meat" ]);
-    ("Poultry", [ "poultry" ]);
+    ("Eggs", [ "eggs" ]);
+    ("Shellfish", [ "shellfish" ]);
+    ("Fish", [ "fish" ]);
+    ("Sesame", [ "sesame" ]);
+    ("Nuts", [ "nuts" ]);
+    ("None of these", []) ]
+
+let restrict_options = 
+  [ ("Kosher", [ "kosher" ]);
+    ("Vegan", [ "vegan" ]);
+    ("Vegetarian", [ "vegetarian" ]);
+    ("Halal", [ "halal" ]);
     ("None of these", []) ]
 
 let time_options =
@@ -37,6 +47,7 @@ let serving_options =
 
 type answers = {
   flavor : flavor;
+  allergens : string list;
   restrict : string list; 
   time : int;
   serving : int;  
@@ -45,12 +56,13 @@ type answers = {
 let check_positive name n = 
   if n < 1 then invalid_arg (name ^ " must be positive")
 
-let make ~flavor ~restrict ~time ~serving =
+let make ~flavor ~allergens ~restrict ~time ~serving =
   check_positive "Time" time;
   check_positive "Serving" serving;
-  { flavor; restrict; time; serving }
+  { flavor; allergens; restrict; time; serving }
 
 let get_flavor a = a.flavor
+let get_allergens a = a.allergens
 let get_restrict a = a.restrict
 let get_time a = a.time
 let get_serving a = a.serving

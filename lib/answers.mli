@@ -6,6 +6,7 @@ type flavor =
 (* type restriction = | Gluten | Dairy | Meat | Poultry *)
 
 val flavor_options : (string * flavor) list
+val allergens_options : (string * string list) list
 val restrict_options : (string * string list) list
 val time_options : (string * int) list
 val serving_options : (string * int) list
@@ -13,13 +14,24 @@ val serving_options : (string * int) list
 type answers
 
 val make :
-  flavor:flavor -> restrict:string list -> time:int -> serving:int -> answers
-(** [f rs t s] is the answers with flavor preference [f], recipe tags to avoid
-    [rs], maximum cooking time [t] in minutes, and [s] servings. Raises:
-    [Invalid_argument] if [t < 1] or [s < 1]. *)
+  flavor:flavor ->
+  allergens:string list ->
+  restrict:string list ->
+  time:int ->
+  serving:int ->
+  answers
+(** [make ~flavor ~allergens ~restrict ~time ~serving] is the answers with
+    flavor preference [flavor], allergen tags to avoid [allergens], dietary
+    restriction tags [restrict], maximum cooking time [time] in minutes, and
+    [serving] servings.
+    Raises: [Invalid_argument] if [time < 1] or [serving < 1]. *)
 
 val get_flavor : answers -> flavor
 (** [get_flavor a] is the flavor preference in [a]. *)
+
+val get_allergens : answers -> string list
+(** [get_allergens a] is the allergen tags to avoid in [a], e.g.
+    [["gluten"; "nuts"]]; [[]] if there are none. *)
 
 val get_restrict : answers -> string list
 (** [get_restrict a] is the recipe tags to avoid in [a], e.g.
