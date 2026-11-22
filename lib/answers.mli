@@ -3,39 +3,34 @@ type flavor =
   | Savory
   | Either
 
-type restriction =
-  | Gluten
-  | Dairy
-  | Meat
-  | Poultry
+(* type restriction = | Gluten | Dairy | Meat | Poultry *)
 
-type time =
-  | Under30
-  | Under60
-  | Under120
-  | Anytime
+val flavor_options : (string * flavor) list
+val restrict_options : (string * string list) list
+val time_options : (string * int) list
+val serving_options : (string * int) list
 
-type answer
-(** A user's completed answers. Invariant: [serving > 0]. *)
+type answers
 
-val make : flavor -> restriction list -> time -> int -> answer
-(** [f rs t s] is the answer, where [f] is flavor, [rs] is restrictions, 
-  [t] is time, and [s] is serving size.
-    Raises: [Invalid_argument] if [serving < 1]. *)
+val make :
+  flavor:flavor -> restrict:string list -> time:int -> serving:int -> answers
+(** [f rs t s] is the answers with flavor preference [f], recipe tags to avoid
+    [rs], maximum cooking time [t] in minutes, and [s] servings. Raises:
+    [Invalid_argument] if [t < 1] or [s < 1]. *)
 
-val flavor : answer -> flavor
-val restrictions : answer -> restriction list
-(** [] if the user selected none *)
-val time : answer -> time
-val serving : answer -> int
+val get_flavor : answers -> flavor
+(** [get_flavor a] is the flavor preference in [a]. *)
 
-val restriction_to_string : restriction -> string
-(** Matches the tags in the recipe JSON files, e.g. [Gluten] is "gluten". *)
+val get_restrict : answers -> string list
+(** [get_restrict a] is the recipe tags to avoid in [a], e.g.
+    [["gluten"; "meat"]]; [[]] if there are none. *)
 
-val time_to_minutes : time -> int
-(** [Anytime] is [max_int]. *)
+val get_time : answers -> int
+(** [get_time a] is the maximum cooking time in minutes in [a]; [max_int] if the
+    user has no limit. *)
 
-val change_flavor : answer -> flavor -> answer
-val change_restrictions : answer -> restriction list-> answer
-val change_time : answer -> time -> answer
-val change_serving : answer -> int -> answer
+val get_serving : answers -> int
+(** [get_serving a] is the number of servings in [a]. *)
+
+(* val restriction_to_string : restriction -> string
+ * Matches the tags in the recipe JSON files, e.g. [Gluten] is "gluten". *)

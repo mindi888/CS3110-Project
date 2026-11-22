@@ -9,39 +9,56 @@ type question = {
   style : style;
 }
 
-let prompt q = q.prompt
-let choices q = q.choices
-let style q = q.style
+let get_prompt q = q.prompt
+let get_choices q = q.choices
+let get_style q = q.style
+
+(* PRIVATE HELPERS *)
+
+(* getting the answer choices to display*)
+let labels options = List.map (fun (label, _) -> label) options
+
+(* getting the option the user selected *)
+let parse options label = List.assoc label options
+
+(* getting the multiple options the user selected *)
+let parse_multiple options label = List.concat_map (parse options) label
+
+(* QUESTIONS *)
 
 let flavor_q =
   {
     prompt = "What flavor would you prefer?";
-    choices = [ "Sweet"; "Savory"; "No preference" ];
+    choices = labels Answers.flavor_options;
     style = Buttons;
   }
 
-let restriction_q =
+let restrict_q =
   {
     prompt = "Do you have any dietary restrictions?";
-    choices =
-      [ "Gluten-free"; "Dairy-free"; "No meat"; "No poultry"; "None of these" ];
+    choices = labels Answers.restrict_options;
     style = Checkboxes;
   }
 
 let time_q =
   {
     prompt = "How much time would you like to spend cooking?";
-    choices =
-      [ "Under 30 minutes"; "Under 1 hour"; "Under 2 hours"; "Doesn't matter" ];
+    choices = labels Answers.time_options;
     style = Buttons;
   }
 
 let serving_q =
   {
     prompt = "How many servings would you like?";
-    choices = [ "1"; "2"; "3"; "4"; "6"; "8"; "12" ];
+    choices = labels Answers.serving_options;
     style = Dropdown;
   }
 
-let questions = [ flavor_q; restriction_q; time_q; serving_q ]
+let questions = [ flavor_q; restrict_q; time_q; serving_q ]
 
+let to_answers ~flavor ~restrict ~time ~serving =
+  Answers.make
+    ~flavor:(parse Answers.flavor_options flavor)
+    ~restrict:(parse_multiple Answers.restrict_options restrict)
+    ~time:(parse Answers.time_options time)
+    ~serving:(parse Answers.serving_options serving)
