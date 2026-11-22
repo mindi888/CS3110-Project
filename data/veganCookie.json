@@ -1,7 +1,7 @@
  {"name" : "Vegan Raspberry Cookies",
     "flavor": "sweet",
     "allergens" : ["gluten"],
-    "restrictions": ["kosher", "vegan", "vegatarian"],
+    "restrictions": ["vegan", "vegetarian"],
     "cooking_time_min": 90,
     "servings": 9, 
     "ingredients": {

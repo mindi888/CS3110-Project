@@ -1,22 +1,31 @@
-{"name": "Fried Rice PLACEHOLDER",
+{"name": "Fried Rice",
     "flavor": "savory",
-    "allergens" : ["gluten", "shellfish", "soy"],
-    "restrictions": ["halal"],
-    "cooking_time_min": 35,
+    "allergens" : [],
+    "restrictions": ["halal", "kosher", "vegan", "vegetarian"],
+    "cooking_time_min": 15,
     "servings": 4, 
     "ingredients": {
-        "Optional Meat":[
-            { "item": "Chicken Thighs", "amount": 4, "unit": ""}
-        ],
         "Rice": [
-             { "item": "Ginger", "amount": 1, "unit": "piece"},
-             { "item": "Spring Onions", "amount": 4, "unit": ""},
-             { "item": "Chili Flakes", "amount": 1, "unit": "TBSP" },
-             { "item": "Soy Sauce", "amount": 2, "unit": "TBSP" },
-             { "item": "Sugar", "amount": 1, "unit": "TBSP" },
-             { "item": "Salt", "amount": 1, "unit": "TBSP" },
-             { "item": "Oyster Sauce", "amount": 1, "unit": "TBSP" },
-             { "item": "Oil", "amount": 0.25, "unit": "Cups" }
+        {"item": "oil", "amount": 0.25, "unit": "Cups"},
+        {"item": "cooked rice", "amount": 4, "unit": "Cups"},
+        {"item": "garlic", "amount": 4, "unit": "Cloves"},
+        {"item": "fresh or frozen vegatables", "amount": 2, "unit": "Cups"},
+        {"item": "salt", "amount": 1, "unit": "TSP"},
+        {"item": "pepper", "amount": 1, "unit": "TSP"}],
+        "Optional Toppings": [
+        {"item": "eggs", "amount": 4, "unit": ""},   
+        {"item": "spam or any meat of choice", "amount": 1, "unit": "Cup"},
+        {"item": "soy sauce", "amount": 3, "unit": "TBSP"},
+        {"item": "spring onions", "amount": 2, "unit": ""}
         ]
+
     },
-     "directions": []}
+     "directions": [
+        "In a pan place oil in and heat up until hot",
+        "Add in finely chopped garlic sauté until fragrent, if wanted, add in eggs in this step too",
+        "Put heat on low and add in vegatables and any optional toppings sauté until cooked through",
+        "Take out the vegtables and toppings and set aside",
+        "Heat up some oil again and add rice. Add a splash of water if the rice is very hard. Cover and let sit on medium heat for 5 minutes",
+        "Uncover rice, add in toppings and vegatables, and sauté until will incorperated",
+        "Add any seasoning, salt and peper and str fry until well incorperated and to taste"
+     ]}

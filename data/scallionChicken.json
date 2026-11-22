@@ -8,12 +8,12 @@
     "ingredients": {
         "Chicken":[
             { "item": "Chicken Thighs", "amount": 4, "unit": ""},
-            { "item": "Ginger", "amount": 2, "unit": "pieces" },
+            { "item": "Ginger", "amount": 2, "unit": "Pieces" },
             { "item": "Spring Onions", "amount": 2, "unit": "" },
             { "item": "Jujube Dates", "amount": 5, "unit": ""}
         ],
         "sauce": [
-             { "item": "Ginger", "amount": 1, "unit": "piece"},
+             { "item": "Ginger", "amount": 1, "unit": "Piece"},
              { "item": "Spring Onions", "amount": 4, "unit": ""},
              { "item": "Chili Flakes", "amount": 1, "unit": "TBSP" },
              { "item": "Soy Sauce", "amount": 2, "unit": "TBSP" },

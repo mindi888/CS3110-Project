@@ -2,7 +2,7 @@
     {"name" : "Matcha Cookies",
     "flavor": "sweet",
     "allergens" : ["gluten", "dairy", "eggs"],
-    "restrictions": ["vegatarian"],
+    "restrictions": ["vegetarian"],
     "cooking_time_min": 35,
     "servings": 24, 
     "ingredients": {
