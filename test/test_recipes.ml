@@ -16,7 +16,8 @@ let testMatcha =
         List.find (fun r -> Recipe.get_name r = "Matcha Cookies") recipes
       in
       assert_equal "sweet" (Recipe.get_flavor matcha);
-      assert_equal [ "gluten"; "dairy" ] (Recipe.get_restrict matcha);
+      assert_equal ["gluten"; "dairy"; "eggs"] (Recipe.get_allergens matcha);
+      assert_equal ["vegatarian"] (Recipe.get_restrict matcha);
       assert_equal 35 (Recipe.cook_time matcha);
       assert_equal 24 (Recipe.servings matcha);
       let directions = Recipe.get_directions matcha in
@@ -45,7 +46,8 @@ let testMac =
         List.find (fun r -> Recipe.get_name r = "Vegan Mac and Cheese") recipes
       in
       assert_equal "savory" (Recipe.get_flavor mac);
-      assert_equal [ "gluten" ] (Recipe.get_restrict mac);
+      assert_equal ["gluten"; "soy"; "nuts"] (Recipe.get_allergens mac);
+      assert_equal ["kosher"; "vegan"; "vegatarian"; "halal"] (Recipe.get_restrict mac);
       assert_equal 45 (Recipe.cook_time mac);
       assert_equal 8 (Recipe.servings mac);
       let directions = Recipe.get_directions mac in
