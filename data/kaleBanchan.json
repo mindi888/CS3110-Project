@@ -1,0 +1,28 @@
+{"name": "Kale Side Dish",
+    "flavor": "savory",
+    "allergens" : ["sesame", "soy"],
+    "restrictions": ["halal", "kosher", "vegan", "vegetarian"],
+    "cooking_time_min": 5,
+    "servings": 3, 
+    "ingredients": {
+        "Kale": [
+            { "item": "Precut Kale", "amount": 8, "unit": "Oz"},
+            { "item": "Salt", "amount": 1, "unit": "TSP"}
+        ],
+        "Seasoning": [
+            { "item": "Minced Garlic", "amount": 0.5, "unit": "TBSP"},
+            { "item": "Soy Sauce", "amount": 0.5, "unit": "TSP"},
+            { "item": "Black Pepper", "amount": 0.125, "unit": "TSP"},
+            { "item": "Salt", "amount": 0.125, "unit": "TSP"},
+            { "item": "Sesame seeds", "amount": 0.125, "unit": "TSP"},
+            { "item": "Sesame oil", "amount": 0.125, "unit": "TBSP"}
+        ]
+    },
+     "directions": [
+        "Fill a bowl with water and ice",
+        "Bring a pot of water to a boil and add salt. Once boiled, add kale and blanch for about 30 seconds to 1 minute",
+        "With tongs, take kale out of pot and straight into the ice water",
+        "With a cheesecloth or hands, squeeze out all water from the kale",
+        "In bowl, mix all the seasonings well",
+        "Add the kale and hand toss until well incorporated"
+     ]}

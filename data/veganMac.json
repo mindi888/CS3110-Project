@@ -1,0 +1,47 @@
+{"name" : "Vegan Mac and Cheese",
+    "flavor": "savory",
+    "allergens" : ["gluten", "nuts"],
+    "restrictions": ["kosher", "vegan", "vegetarian", "halal"],
+    "cooking_time_min": 45,
+    "servings": 8, 
+    "ingredients": {
+        "Cheese Sauce": [
+            { "item": "carrot", "amount": 1, "unit": "" },
+            { "item": "yukon gold potatoes", "amount":0.5, "unit": "lbs" },
+            { "item": "raw cashews", "amount": 0.75, "unit": "Cup" },
+            { "item": "water", "amount": 2, "unit": "Cup" },
+            { "item": "nutritional yeast", "amount": 0.5, "unit": "Cup" },
+            { "item": "garlic powder", "amount": 1, "unit": "TSP" },
+            { "item": "onion powder", "amount": 0.5, "unit": "TSP" },
+            { "item": "smoked paprika", "amount": 0.5, "unit": "TSP" },
+            { "item": "cayenne powder", "amount": 0.125, "unit": "TSP" },
+            { "item": "turmeric", "amount": 0.125, "unit": "TSP" },
+            { "item": "soy sauce", "amount": 3, "unit": "TSP" },
+            { "item": "dill pickle brine", "amount": 1.5, "unit": "TBSP" },
+            { "item": "extra virgin olive oil", "amount": 2.5, "unit": "TBSP" },
+            { "item": "salt", "amount": 0.5, "unit": "TSP" },
+            { "item": "pepper", "amount": 0.5, "unit": "TSP" }
+        ],
+        "Crispy Topping": [
+            { "item": "vegan butter", "amount": 2.5, "unit": "TBSP"},
+            { "item": "panko breadcrumbs", "amount": 0.75, "unit": "Cup"},
+            { "item": "nutritional yeast", "amount": 1, "unit": "TBSP"},
+            { "item": "smoked paprika", "amount": 0.125, "unit": "TSP" }
+        ],
+        "Macaroni": [
+            { "item": "vegan butter", "amount": 2.5, "unit": "TBSP"},
+            { "item": "elbow macaroni", "amount": 1, "unit": "box"}
+        ]
+    },
+    "directions":
+    ["Bring a large pot of water to a boil for the macaroni. Add generous amount of salt and cook 1 minute less than time indicated on box",
+    "Drain pasta and add in the butter",
+    "Peel carrot and potatoes and cut into small chunks",
+    "Add carrots, potatoes, and cashews into medium saucepan and cover with water until submerged. Bring to boil and boil for 15 minutes until the vegetables are soft. Drain and rest until cool",
+    "Make crispy topping while veg boils. Melt butter and mix all crispy topping ingredients and a pinch of salt until no clumps",
+    "Add all the remaining cheese sauce ingredients into a blender and boiled carrots and cashews",
+    "Blend on high until smooth and creamy. Then add potatoes and blend on low until fully combined and pureed. Adjust seasoning to taste",
+    "Add cheese sauce into the cooked macaroni. Fold until well incorporated",
+    "Add the incorporated macaroni into a prepared baking dish (~4.8 Q) and sprinkle crispy topping evenly on top",
+    "Bake for 20 minutes or until topping is golden brown. Once done, take out of the oven and cool for 10 to 20 minutes"]
+    }

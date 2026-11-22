@@ -1,3 +1,5 @@
-(test
- (name test_recipebook)
- (libraries ounit2 recipebook))
+(tests
+ (names test_recipebook test_recipes test_questions_answers)
+ (libraries ounit2 recipebook)
+ (deps
+  (source_tree ../data)))
