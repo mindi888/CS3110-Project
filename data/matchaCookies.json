@@ -1,4 +1,4 @@
-[
+
     {"name" : "Matcha Cookies",
     "flavor": "sweet",
     "restrictions" : ["gluten", "dairy"],
@@ -12,7 +12,7 @@
         "wet" : [ { "item": "butter", "amount": 8, "unit": "TBSP" },
         { "item": "brown sugar", "amount": 0.25, "unit": "Cup" },
         { "item": "white sugar", "amount": 0.33, "unit": "Cup" },
-        { "item": "egg", "amount": 1, "unit": "large" },
+        { "item": "egg", "amount": 1, "unit": "" },
         { "item": "Vanilla Extract", "amount": 1, "unit": "TSP" }],
         "optional topping": [
              { "item": "White Chocolate Chips", "amount": 0.5, "unit": "Cup"},
@@ -35,4 +35,3 @@
     "Optional: for frog faces, melt dark chocolate and use piping bag to decorate"
 ]
     }
-]

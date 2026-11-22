@@ -1,4 +1,4 @@
-[ {"name" : "Vegan Mac and Cheese",
+{"name" : "Vegan Mac and Cheese",
     "flavor": "savory",
     "restrictions" : ["gluten"],
     "cooking_time_min": 45,
@@ -44,4 +44,3 @@
     "Add the incorporated macaroni into a prepared baking dish (~4.8 Q) and sprinkle crispy topping evenly on top",
     "Bake for 20 minutes or until topping is golden brown. Once done, take out of the oven and cool for 10 to 20 minutes"]
     }
-] 
