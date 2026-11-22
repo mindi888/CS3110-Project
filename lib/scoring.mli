@@ -14,10 +14,10 @@ type scored_recipe = {
 }
 (** Type representation of a scored recipe, which contains a recipe, its score, and an explanation for its score. *)
 
-val filter : Recipe.recipe list -> answers -> Recipe.recipe list
+val filter : Recipe.recipe list -> Answers.answers -> Recipe.recipe list
 (** [filter recipes responses] removes all recipes in [recipes] that contain one or more of the restrictions in the provided [responses] *)
 
-val rank : Recipe.recipe list -> answers -> scored_recipe list
+val rank : Recipe.recipe list -> Answers.answers -> scored_recipe list
 (** [rank recipes responses] ranks the recipes in [recipes] based on how well they fit the user's preferences in [responses]. Requires that all inputted recipes do not violate the user's dietary restrictions. Returns the recipes ranked by their scores from highest to lowest. *)
 
 val get_recipe : scored_recipe -> Recipe.recipe
