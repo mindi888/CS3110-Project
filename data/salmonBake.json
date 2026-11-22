@@ -1,0 +1,45 @@
+
+    {"name" : "Salmon Bake",
+    "flavor": "savory",
+    "allergens" : ["fish", "dairy", "shellfish", "sesame", "gluten"],
+    "restrictions": ["halal"],
+    "cooking_time_min": 35,
+    "servings": 6, 
+    "ingredients": {
+        "Rice" : [
+            { "item": "Cooked rice", "amount": 2, "unit": "Cup" },
+            { "item": "Rice Wine Vinegar", "amount": 2, "unit": "TBSP" },
+            { "item": "Sugar", "amount": 1, "unit": "TBSP" }
+        ],
+        "Salmon":[
+            { "item": "Salmon", "amount": 8, "unit": "Oz" },
+            { "item": "Oil", "amount": 2, "unit": "TBSP" },
+            { "item": "Garlic Powder", "amount": 1, "unit": "TBSP" },
+            { "item": "Paprika Powder", "amount": 1, "unit": "TBSP" },
+            { "item": "Onion Powder", "amount": 1, "unit": "TBSP" },
+            { "item": "Salt", "amount": 1, "unit": "TSP" },
+            { "item": "Pepper", "amount": 1, "unit": "TSP" }
+        ],
+        "Mix-ins":[
+            { "item": "Imitation crab leg", "amount": 10, "unit": "Oz" },
+            { "item": "Cream Cheese", "amount": 4, "unit": "Oz" },
+            { "item": "Kewpie Mayonnaise", "amount": 0.33, "unit": "Cup" },
+            { "item": "Sriracha", "amount": 0.33, "unit": "Cup" }
+        ],
+        "Toppings": [
+            { "item": "Furikake", "amount": 4, "unit": "TBSP" },
+            { "item": "Seaweed", "amount": 6, "unit": "Packs" }
+        ]
+    },
+    "directions":
+    ["Mix rice with the rice wine vinegar and sugar. Set aside",
+    "lather salmon with oil and season on both sides with the garlic, paprika, onion powder and salt and pepper",
+    "Place salmon in the airfryer for 15-20 minutes at 390° F",
+    "In the meantime, cut imitation crab into small bite size pieces and mix it in with the mayo and sriracha", 
+    "Add in the cream cheese to the mixture and hot salmon into the bowl. Mix until well incorporated",
+    "Preheat oven to 375 °F",
+    "In a glass baking dish, place rice mixture and smush into a flat layer and add a generous amount of furikake on top",
+    "Scoop crab-salmon mixture on top and flatten",
+    "Bake for 15-17 minutes until the top layer is golden",
+    "Once out of the oven, add a generous sprinkle of furikake, add some mayo and sriracha on top. Serve with seaweed sheets."]
+    }

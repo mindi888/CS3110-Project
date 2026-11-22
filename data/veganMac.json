@@ -1,7 +1,7 @@
 {"name" : "Vegan Mac and Cheese",
     "flavor": "savory",
-    "allergens" : ["gluten", "soy", "nuts"],
-    "restrictions": ["kosher", "vegan", "vegatarian", "halal"],
+    "allergens" : ["gluten", "nuts"],
+    "restrictions": ["kosher", "vegan", "vegetarian", "halal"],
     "cooking_time_min": 45,
     "servings": 8, 
     "ingredients": {

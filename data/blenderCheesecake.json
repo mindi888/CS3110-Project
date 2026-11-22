@@ -1,0 +1,24 @@
+{"name": "Blender Cheesecake",
+    "flavor": "sweet",
+    "allergens" : ["dairy", "eggs"],
+    "restrictions": ["halal", "kosher", "vegetarian"],
+    "cooking_time_min": 60,
+    "servings": 4, 
+    "ingredients": {
+        "all" : [
+            {"item": "Cream cheese", "amount": 1.33, "unit": "Cup"},
+            {"item": "eggs", "amount": 2, "unit": ""},
+            {"item": "heavy cream", "amount": 0.75, "unit": "Cup"},
+            {"item": "corn starch", "amount": 1, "unit": "TBSP"}
+        ]
+    },
+     "directions": [
+        "Preheat oven to 425 ° F",
+        "Place all the ingredients into a blender on high and blend until well incorporated and creamy",
+        "If batter looks a little too thick, add 1 TBSP of heavy cream",
+        "Line parchment paper in a 6 in round cake pan",
+        "Bake for about 30 to 35 minutes and for a golden top, broil for about 50 seconds",
+        "Take Cheesecake out of the oven and cool for about 20 minutes or until the pan is not hot",
+        "Serve or leave in fridge overnight for a more firm texture"
+     ]
+    }
