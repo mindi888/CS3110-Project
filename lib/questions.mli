@@ -16,6 +16,7 @@ val get_style : question -> style
 (** [get_style q] is how the choices of [q] should be displayed. *)
 
 val flavor_q : question
+val allergens_q : question
 val restrict_q : question
 val time_q : question
 val serving_q : question
@@ -23,9 +24,10 @@ val questions : question list
 
 val to_answers :
   flavor:string ->
+  allergens:string list ->
   restrict:string list ->
   time:string ->
   serving:string ->
   Answers.answers
-(** [to_answers ~flavor ~restrict ~time ~serving] is the answers built from the
+(** [to_answers ~flavor ~allergens ~restrict ~time ~serving] is the answers built from the
     labels the user selected. *)
