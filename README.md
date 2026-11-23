@@ -1,6 +1,6 @@
 # CS 3110 Project — Team 10 (out of 10)
 
-## TBH (Recipe Book) (or what abt Dishcovery?)
+## Dishcovery
 
 ## Team Members
 
