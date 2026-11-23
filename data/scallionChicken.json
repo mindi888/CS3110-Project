@@ -1,7 +1,7 @@
 
     {"name": "Scallion Chicken",
     "flavor": "savory",
-    "allergens" : ["gluten", "shellfish", "gluten"],
+    "allergens" : ["gluten", "shellfish"],
     "restrictions": ["halal"],
     "cooking_time_min": 35,
     "servings": 4, 
