@@ -9,7 +9,7 @@ let preferences_tests =
     ( "saved preferences load with the same values" >:: fun _ ->
       let original =
         Answers.make ~flavor:Answers.Savory ~restrict:[ "dairy" ] ~time:30
-          ~serving:4
+          ~serving:4 ~allergens:[]
       in
       let filename = Filename.temp_file "preferences_test" ".dat" in
 
@@ -32,5 +32,26 @@ let preferences_tests =
       assert_equal None (Preferences.load filename) );
   ]
 
-let tests = "preferences" >::: preferences_tests
+let labels_tests =
+  [
+    ( "answers convert back to display labels" >:: fun _ ->
+      let a =
+        Answers.make ~flavor:Answers.Savory ~restrict:[ "vegan" ] ~time:30
+          ~serving:4 ~allergens:[]
+      in
+
+      let labels = Preferences.to_labels a in
+
+      assert_equal ~printer:(fun x -> x) "Savory" labels.flavor;
+      assert_equal ~printer:print_list [ "Vegan" ] labels.restrict;
+      assert_equal ~printer:(fun x -> x) "Under 30 minutes" labels.time;
+      assert_equal ~printer:(fun x -> x) "4" labels.serving );
+  ]
+
+let tests =
+  "preferences"
+  >::: [
+         "saving and loading" >::: preferences_tests; "labels" >::: labels_tests;
+       ]
+
 let _ = run_test_tt_main tests
