@@ -1,4 +1,5 @@
 type labels = {
+  allergens : string list;
   flavor : string;
   restrict : string list;
   time : string;
@@ -34,6 +35,17 @@ let flavor_label = function
 let label_of_value options value =
   fst (List.find (fun (_, v) -> v = value) options)
 
+(** [allergen_labels allergens] returns the display labels corresponding to the
+    allergen tags in [allergens]. If [allergens] is empty, it returns
+    [["None of these"]]. *)
+let allergen_labels allergens =
+  if allergens = [] then [ "None of these" ]
+  else
+    Answers.allergens_options
+    |> List.filter_map (fun (label, tags) ->
+        if List.exists (fun tag -> List.mem tag allergens) tags then Some label
+        else None)
+
 (** [time_label time] returns the display label corresponding to [time]. *)
 let time_label time = label_of_value Answers.time_options time
 
@@ -57,6 +69,7 @@ let restriction_labels restrictions =
     labels used by the questionnaire UI. *)
 let to_labels answers =
   {
+    allergens = allergen_labels (Answers.get_allergens answers);
     flavor = flavor_label (Answers.get_flavor answers);
     restrict = restriction_labels (Answers.get_restrict answers);
     time = time_label (Answers.get_time answers);

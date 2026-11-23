@@ -37,7 +37,7 @@ let labels_tests =
     ( "answers convert back to display labels" >:: fun _ ->
       let a =
         Answers.make ~flavor:Answers.Savory ~restrict:[ "vegan" ] ~time:30
-          ~serving:4 ~allergens:[]
+          ~serving:4 ~allergens:[ "gluten" ]
       in
 
       let labels = Preferences.to_labels a in
@@ -45,7 +45,8 @@ let labels_tests =
       assert_equal ~printer:(fun x -> x) "Savory" labels.flavor;
       assert_equal ~printer:print_list [ "Vegan" ] labels.restrict;
       assert_equal ~printer:(fun x -> x) "Under 30 minutes" labels.time;
-      assert_equal ~printer:(fun x -> x) "4" labels.serving );
+      assert_equal ~printer:(fun x -> x) "4" labels.serving;
+      assert_equal ~printer:print_list [ "Gluten" ] labels.allergens );
   ]
 
 let tests =

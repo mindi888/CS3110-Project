@@ -1,4 +1,5 @@
 type labels = {
+  allergens : string list;
   flavor : string;
   restrict : string list;
   time : string;
