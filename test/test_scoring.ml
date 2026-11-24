@@ -102,6 +102,20 @@ let single_allergen_drop _ =
   let filtered = Scoring.filter answers [cheesecake] in
   assert_equal [] filtered
 
+(* ------------------ BEGINNING OF RANKING TESTS --------------------------- *)
+let empty_list _ =
+  let answers = Answers.make ~flavor:Answers.Sweet ~allergens:[]
+          ~restrict:[] ~time:30 ~serving:2 in
+  let ranked = Scoring.rank answers [] in
+  assert_equal [] ranked
+(*
+let recipe_zero_score _ =
+  let answers = Answers.make ~flavor:Answers.Savory ~allergens:[]
+          ~restrict:[] ~time:30 ~serving:2 in
+  let matcha = get_recipe "Matcha Cookies" in
+  let ranked = Scoring.rank answers [matcha] in
+  check_ranking [{}] *)
+
 (* -------------------------- ALL TEST SUITES ------------------------------ *)
 let filter_tests_suite = "Filtering test suite" >::: [
   "Filtering an empty recipe list with no allergens or restrictions in answers should return the empty list" >:: all_empty;
@@ -118,4 +132,13 @@ let filter_tests_suite = "Filtering test suite" >::: [
   "A recipe with several allergens should be dropped if at least one is met by the user" >:: single_allergen_drop;
 ]
 
-let _ = run_test_tt_main filter_tests_suite
+let rank_tests_suite = "Ranking test suite" >::: [
+  "Ranking an empty recipe list should return the empty list" >:: empty_list;
+  (* "Ranking a recipe list with a single recipe that does not meet any preferences should return a single-element list with a score of 0 and the proper explanation" >:: recipe_zero_score; *)
+]
+
+let _ = run_test_tt_main ("Tests" >:::
+      [
+        filter_tests_suite;
+        rank_tests_suite
+      ])
