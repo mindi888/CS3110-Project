@@ -65,7 +65,7 @@ let score_flavor resp_flavor rec_flavor =
 (** [score_time resp_time rec_time] compares [resp_time] and [rec_time],
     returning a numerical score and reason for the score. *)
 let score_time resp_time rec_time =
-  if rec_time < resp_time then
+  if rec_time <= resp_time then
     (1, Printf.sprintf "Cook time under %d minutes" resp_time)
   else (0, Printf.sprintf "Cook time over %d minutes" resp_time)
 
@@ -90,7 +90,9 @@ let score_and_explain responses recipe =
 (** [rank recipes responses] ranks the recipes in [recipes] based on how well
     they fit the user's preferences in [responses]. Requires that all inputted
     recipes do not violate the user's dietary restrictions. Returns the recipes
-    ranked by their scores from highest to lowest. *)
+    ranked by their scores from highest to lowest. Sorting is stable - that is,
+    if two recipes have the same score, they will be returned in the same order
+    they were passed in as. *)
 let rank responses recipes =
   let scored_recipes = List.map (score_and_explain responses) recipes in
   (* Sorts the list of scored recipes in decreasing order, starting with the
@@ -98,7 +100,7 @@ let rank responses recipes =
      and recipe 2 has a score of 3, comparing the two yields a negative number,
      which means recipe 1 goes before recipe 2. Ties are currently broken
      arbitrarily *)
-  List.sort (fun rec1 rec2 -> rec2.score - rec1.score) scored_recipes
+  List.stable_sort (fun rec1 rec2 -> rec2.score - rec1.score) scored_recipes
 
 (** [get_recipe scored] returns the recipe in [scored] *)
 let get_recipe scored = scored.recipe
