@@ -1,0 +1,28 @@
+{"name": "Oven Baked Salmon",
+    "flavor": "savory",
+    "allergens" : ["fish"],
+    "restrictions": ["halal", "kosher"],
+    "cooking_time_min": 25,
+    "servings": 4, 
+    "ingredients": {
+        "Main" : [
+            {"item": "Salmon, 8oz", "amount": 4, "unit": "Fillets"},
+            {"item": "Lemon", "amount": 1, "unit": ""},
+            {"item": "Minced garlic", "amount": 4, "unit": "Cloves"},
+            {"item": "Olive Oil", "amount": 4, "unit": "TBSP"},
+            {"item": "Salt", "amount": 1, "unit": "TSP"},
+            {"item": "Lemon Pepper", "amount": 1, "unit": "TBSP"},
+            {"item": "Paprika", "amount": 1, "unit": "TBSP"},
+            {"item": "Butter", "amount": 4, "unit": "TSP"}
+        ]
+    },
+     "directions": [
+        "Preheat oven to 425° F",
+        "Place foil on a large sheet pan",
+        "Rub oil, salt, lemon pepper, and paprika into salmon fillets",
+        "Place salmon about 2 inches apart from each other and cut lemon slices and place on top",
+        "Then place 1 tsp of butter on each piece of salmon and add minced garlic in pan",
+        "Place in oven for about 20-25 minutes until internal temp is 145° F",
+        "Once done, serve with rice"
+    ]
+    }

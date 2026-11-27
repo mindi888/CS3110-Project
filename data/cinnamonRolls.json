@@ -1,0 +1,42 @@
+{"name": "Cinnamon Rolls",
+    "flavor": "sweet",
+    "allergens" : ["dairy", "eggs"],
+    "restrictions": ["vegetarian"],
+    "cooking_time_min": 125,
+    "servings": 10, 
+    "ingredients": {
+        "Dough": [
+            {"item": "all purpose flour", "amount": 2.75, "unit": "Cup"},
+            {"item": "sugar", "amount": 0.25, "unit": "Cup"},
+            {"item": "salt", "amount": 0.5, "unit": "TSP"},
+            {"item": "milk", "amount": 0.75, "unit": "Cup"},
+            {"item": "butter", "amount": 3, "unit": "TBSP"},
+            {"item": "yeast", "amount": 2.25, "unit": "TSP"},
+            {"item": "egg", "amount": 1, "unit": ""}
+        ],
+        "Filling":[
+            {"item": "brown sugar", "amount": 0.33, "unit": "Cup"},
+            {"item": "cinnamon", "amount": 1, "unit": "TBSP"},
+            {"item": "butter", "amount": 3, "unit": "TBSP"}
+        ],
+        "Frosting":[
+            {"item": "cream cheese", "amount": 4, "unit": "Oz"},
+            {"item": "powdered sugar", "amount": 0.66, "unit": "Cup"},
+            {"item": "vanilla extract", "amount": 1, "unit": "TSP"}
+        ]
+    },
+     "directions": [
+        "Whisk flour, sugar and salt in a large bowl",
+        "Combine milk and butter and heat til warm to the touch. Then whisk yeast until it is dissolved",
+        "Pour yeast mixture into the dry ingredients and add egg. Mix until a soft dough forms",
+        "Transfer dough onto lightly floured surface and knead for 3-5 minutes",
+        "Place dough into a lightly greased bowl and cover and rest for 10 minutes",
+        "For filling, put softened butter, cinnamon and brown sugar into a bowl and mix well",
+        "After 10 minutes, roll out the dough into a 14x8 in rectangle and spread the filling mixture on the dough",
+        "Roll dough into a 14 inch log and cut into a 10 pieces and place into a well greased round cake pan (9 in)",
+        "Cover pan and place in warm area for 60-90 minutes or until doubled in size",
+        "Preheat oven to 375° F and bake rolls for 24-27 minutes or until lightly browned.",
+        "For frosting, mix vanilla, sugar and softened cream cheese in a bowl",
+        "Once rolls are done, spread frosting mixture across all rolls"
+     ]
+    }

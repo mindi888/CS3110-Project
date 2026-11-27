@@ -1,0 +1,31 @@
+{"name": "Blue Cheese Salad",
+    "flavor": "savory",
+    "allergens" : ["dairy"],
+    "restrictions": ["vegetarian", "halal", "kosher"],
+    "cooking_time_min": 15,
+    "servings": 4, 
+    "ingredients": {
+        "Salad":[
+            {"item": "Mixed Greens", "amount": 6, "unit": "Cup"},
+            {"item": "Blue Cheese", "amount": 0.5, "unit": "Cup"},
+            {"item": "Candied Walnuts", "amount": 1.5, "unit": "Cup"},
+            {"item": "Apple", "amount": 1, "unit": ""}
+        ],
+        "Dressing":[
+            {"item": "Olive Oil", "amount": 0.25, "unit": "Cup"},
+            {"item": "Minced Onions", "amount": 1, "unit": "TBSP"},
+            {"item": "Apple Cider Vinegar", "amount": 1.5, "unit": "TBSP"},
+            {"item": "Wine Vinegar", "amount": 0.33, "unit": "Cup"},
+            {"item": "Dijon Mustard", "amount": 1, "unit": "TSP"},
+            {"item": "Sugar", "amount": 0.33, "unit": "Cup"},
+            {"item": "Salt", "amount": 0.5, "unit": "TSP"},
+            {"item": "Worcestershire Sauce", "amount": 1, "unit": "TBSP"}
+        ]
+    },
+     "directions": [
+        "Combine sugar, salt, mustard, vinegars until sugar is dissolved.",
+        "Whisk in onions and Worcestershire. Add oil and whisk until emulsified",
+        "Slice up the apple into thin slices and mix it in with the rest of the salad ingredients",
+        "Toss the salad and dressing together and serve. "
+    ]
+    }

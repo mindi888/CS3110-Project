@@ -1,0 +1,27 @@
+{"name": "Feta Tomato Pasta",
+    "flavor": "savory",
+    "allergens" : ["dairy"],
+    "restrictions": ["vegetarian", "halal", "kosher"],
+    "cooking_time_min": 35,
+    "servings": 4, 
+    "ingredients": {
+        "Main" : [
+            {"item": "Pasta", "amount": 1, "unit": "box"},
+            {"item": "Cherry Tomatoes", "amount": 6, "unit": "Cup"},
+            {"item": "Feta Cheese", "amount": 1, "unit": "Block"},
+            {"item": "Olive Oil", "amount": 5, "unit": "TBSP"},
+            {"item": "Garlic", "amount": 8, "unit": "Cloves"},
+            {"item": "Salt", "amount": 1, "unit": "TSP"},
+            {"item": "Black Pepper", "amount": 0.5, "unit": "TSP"},
+            {"item": "Paprika", "amount": 1, "unit": "TSP"}
+        ]
+    },
+     "directions": [
+        "Preheat oven to 425° F",
+        "Put feta cheese in the middle of a glass baking dish and surround with the cherry tomatoes and garlic",
+        "Coat the ingredients with oil, salt, pepper, paprika and black pepper",
+        "Bake for about 25-30 minutes. While the sauce is baking, cook pasta according to instructions on the box and drain and set aside",
+        "Once out of the oven, smush tomatoes, garlic and feta and mix well. Or place everything into a blender and blend until smooth.",
+        "Add the cooked pasta into the mixture and serve."
+    ]
+    }

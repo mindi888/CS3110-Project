@@ -1,0 +1,23 @@
+{"name": "Apple Sauce",
+    "flavor": "sweet",
+    "allergens" : [],
+    "restrictions": ["vegetarian", "vegan", "halal", "kosher"],
+    "cooking_time_min": 30,
+    "servings": 4, 
+    "ingredients": {
+        "Main" : [
+            {"item": "Apples", "amount": 6, "unit": ""},
+            {"item": "Water", "amount": 1, "unit": "Cup"},
+            {"item": "Cinnamon", "amount": 1, "unit": "TSP"}
+        ]
+    },
+     "directions": [
+        "Dice apples of your own choosing into bite size pieces",
+        "In a large pot, add apples and water and bring into a boil",
+        "Turn heat to medium and cover for about 20-25 minutes. Stir occasionally.",
+        "While boiling, take a taste, add sugar here if desired in 1 TBSP intervals.",
+        "Once apples are soft and fork tender, remove off heat and let cool for 5 minutes",
+        "Add the boiled apples to a blender and blend until smooth or use an immersion blender",
+        "Let the applesauce cool until desired temperature and enjoy!"
+    ]
+    }

@@ -1,0 +1,35 @@
+{"name": "Japanese Milk Bread",
+    "flavor": "sweet",
+    "allergens" : ["gluten", "dairy", "eggs"],
+    "restrictions": ["vegetarian", "halal", "kosher"],
+    "cooking_time_min": 205,
+    "servings": 1, 
+    "ingredients": {
+        "Tangzhong": [
+            {"item": "all purpose flour", "amount": 2, "unit": "TBSP"},
+            {"item": "water", "amount": 3, "unit": "TBSP"},
+            {"item": "milk", "amount": 3, "unit": "TBSP"}
+        ],
+        "Dough":[
+            {"item": "all purpose flour", "amount": 2.5, "unit": "Cup"},
+            {"item": "white sugar", "amount": 0.25, "unit": "Cup"},
+            {"item": "salt", "amount": 1, "unit": "TSP"},
+            {"item": "yeast", "amount": 1, "unit": "TBSP"},
+            {"item": "milk", "amount": 0.5, "unit": "Cup"},
+            {"item": "egg", "amount": 1, "unit": ""},
+            {"item": "butter", "amount": 4, "unit": "TBSP"}]
+    },
+     "directions": [
+        "Combine Tangzhong ingredients into a small saucepan and whisk until no lumps remain",
+        "Place saucepan over low heat and whisking constantly until thick (it should be sticky). Should take about 3-5 minutes",
+        "Transfer Tangzhong into a small cup until lukewarm",
+        "Combine flour, sugar, salt, yeast, milk, egg, butter, and Tangzhong until a dough forms. Then, knead the dough until smooth.",
+        "Shape dough into a ball and cover for 1 to 1.5 hours",
+        "Deflate the dough and divide into four equal pieces.",
+        "roll dough into a log about 8 inches and roll into 4 inch logs and tuck pieces at the bottom",
+        "Place four rolls into a lightly buttered 9x5 in loaf pan",
+        "Cover pan and let rest for 40-50 minutes",
+        "Preheat oven to 350° F and brush dough with some milk on top",
+        "Bake for about 30-35 minutes until golden brown.",
+        "Let dough cool completely and serve."
+     ]}

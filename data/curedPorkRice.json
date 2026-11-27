@@ -1,0 +1,33 @@
+{"name": "Cured Pork Rice",
+    "flavor": "savory",
+    "allergens" : ["meat"],
+    "restrictions": [],
+    "cooking_time_min": 90,
+    "servings": 6, 
+    "ingredients": {
+        "Rice" : [
+            {"item": "White Rice", "amount": 4, "unit": "Cup"},
+            {"item": "Water", "amount": 5.5, "unit": "Cup"},
+            {"item": "Chinese cured Pork", "amount": 2, "unit": "Strips"},
+            {"item": "Chinese sausage", "amount": 5, "unit": "Links"}
+        ],
+        "Sauce": [
+            {"item": "Soy Sauce", "amount": 4, "unit": "TBSP"},
+            {"item": "Sugar", "amount": 1, "unit": "TBSP"},
+            {"item": "Oil", "amount": 0.125, "unit": "Cup"},
+            {"item": "Garlic", "amount": 4, "unit": "Cloves"},
+            {"item": "Ginger", "amount": 1, "unit": "TBSP"},
+            {"item": "Green Onion", "amount": 2, "unit": ""}
+        ]
+    },
+     "directions": [
+        "Wash rice and cover with water and set aside for 30 minutes",
+        "Chop the pork and sausage into thin slices about 1/8 of an inch. Mix together in a bowl. Drain the rice and set aside",
+        "In your rice cooker, place half of the rice at the bottom and place half of the meat on top. Then repeat the process with the rest of the remaining rice and meat",
+        "Add the water to just over the mixture and place into rice cooker. Cook on regular rice setting",
+        "While the rice is cooking, mince the garlic, ginger and green onion and mix in a bowl",
+        "Heat up oil until hot and pour over the herb mix. In a separate bowl mix soy sauce and sugar until well combined. Then add oil mixture into the soy sauce-sugar mixture",
+        "Once rice is done cooking, then mix the rice meat mixture and leave covered for 15 minutes",
+        "Serve the mixture with sauce and enjoy!"
+    ]
+    }

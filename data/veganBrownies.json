@@ -1,0 +1,29 @@
+{"name": "Vegan Gluten-Free Brownies",
+    "flavor": "sweet",
+    "allergens" : [],
+    "restrictions": ["vegetarian", "vegan", "halal", "kosher"],
+    "cooking_time_min": 40,
+    "servings": 12, 
+    "ingredients": {
+        "Main" : [
+            {"item": "gluten-free flour", "amount": 1, "unit": "Cup"},
+            {"item": "white sugar", "amount": 1.5, "unit": "Cup"},
+            {"item": "dark cocoa powder", "amount": 0.75, "unit": "Cup"},
+            {"item": "baking powder", "amount": 1, "unit": "TSP"},
+            {"item": "salt", "amount": 0.25, "unit": "TSP"},
+            {"item": "vegan butter", "amount": 0.5, "unit": "Cup"},
+            {"item": "maple syrup", "amount": 1, "unit": "TBSP"},
+            {"item": "soy milk", "amount": 0.25, "unit": "Cup"},
+            {"item": "dairy-free chocolate chips", "amount": 0.5, "unit": "Cup"}
+        ]
+    },
+     "directions": [
+        "Preheat oven to 350° F and line a baking pan with parchment paper, preferably 8 x 8 in",
+        "In a large bowl mix melted butter and sugar until well combined. Then, stir in maple syrup and soy milk",
+        "Add in flour, sifted cocoa powder, baking powder, and salt. Whisk until well combined, mixture should be thick",
+        "Fold in chocolate chips and dump batter into the pan. Smooth out the top with a spatula or hands",
+        "Bake for 30 min, the middle still should be a little jiggly",
+        "Remove and let the brownies cool for 15 minutes in the pan.",
+        "Remove brownies from pan and cool for another 30 minutes. Enjoy!"
+    ]
+    }
