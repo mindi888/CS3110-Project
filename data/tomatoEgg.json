@@ -1,0 +1,27 @@
+{"name": "Tomato and Egg Stir Fry",
+    "flavor": "savory",
+    "allergens" : ["eggs"],
+    "restrictions": ["halal", "kosher", "vegetarian"],
+    "cooking_time_min": 15,
+    "servings": 2, 
+    "ingredients": {
+        "Main":[
+            { "item": "eggs", "amount": 4, "unit": ""},
+            { "item": "tomatoes", "amount": 4, "unit": ""},
+            { "item": "green onions", "amount": 1, "unit": ""},
+            { "item": "white peper", "amount": 1, "unit": "TSP"},
+            { "item": "salt", "amount": 1, "unit": "TSP"},
+            { "item": "sugar", "amount": 1, "unit": "TSP"},
+            { "item": "soy sauce", "amount": 1, "unit": "TBSP"},
+            { "item": "water", "amount": 0.25, "unit": "Cup"},
+            { "item": "potatostarch", "amount": 1, "unit": "TSP"},
+            { "item": "oil", "amount": 3, "unit": "TBSP"}
+        ]
+    },
+     "directions": [
+        "Cut tomatoes into small pieces and finely chop the green onions",
+        "Scramble the eggs in a bowl",
+        "Heat up pan until medium heat, add the half the oil and scramble the eggs until cooked. Set aside",
+        "Add the other half of the oil on high heat and add tomates and scallions. Stir fry for about a minute add the water and cover for 5 minutes",
+        "Smush the tomates with a spatula to get the juices out and add salt, sugar, white pepper and soy sauce. Stir and cover for 3 minutes",
+        "Add the potatostarch back in and stir well. Then add back in eggs and add sugar and salt to tatse." ]}
