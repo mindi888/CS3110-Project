@@ -3,8 +3,7 @@ type flavor =
   | Savory
   | Either
 
-(* type restriction = | Gluten | Dairy | Meat | Poultry *)
-
+  
 val flavor_options : (string * flavor) list
 val allergens_options : (string * string list) list
 val restrict_options : (string * string list) list

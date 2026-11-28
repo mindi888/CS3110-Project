@@ -3,12 +3,6 @@ type flavor =
   | Savory
   | Either
 
-(* 
-type restriction =
-  | Gluten
-  | Dairy
-  | Meat
-  | Poultry *)
 
 (* ANSWER PAIRINGS *)
 
@@ -40,7 +34,6 @@ let time_options =
     ("Under 2 hours", 120);
     ("Doesn't matter", max_int) ]
 
-(* TODO: Still not sure what choices this should/how to represent them *)
 let serving_options =
   List.map (fun n -> (string_of_int n, n)) [ 1; 2; 3; 4; 6; 8; 12 ]
 

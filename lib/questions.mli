@@ -22,6 +22,16 @@ val time_q : question
 val serving_q : question
 val questions : question list
 
+val selections_to_answers : (question * string list) list -> Answers.answers
+(** [selections_to_answers sel] is the answers built from the labels the user
+    picked, where [sel] pairs each question with its selected labels: exactly
+    one for [Buttons] and [Dropdown], any number for [Checkboxes].
+    Requires: every question in [questions] is in [sel], and every label is one
+    of that question's [get_choices].
+    Raises: [Not_found] if a question is missing from [sel], and
+    [Invalid_argument] if a single-choice question has more or fewer than one
+    label. *)
+
 val to_answers :
   flavor:string ->
   allergens:string list ->

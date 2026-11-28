@@ -160,11 +160,112 @@ let answers_tests =
         (Answers.allergens_options @ Answers.restrict_options) );
   ]
 
+(* ---------- selections_to_answers: (question, labels) pairs -> answers ---- *)
+
+(** [sel ()] is a full selection with one entry per question, using the same
+    defaults as [ans], so each test only names the selection it is checking. *)
+let sel ?(flavor = [ "Sweet" ]) ?(allergens = []) ?(restrict = [])
+    ?(time = [ "Under 1 hour" ]) ?(serving = [ "4" ]) () =
+  [
+    (Questions.flavor_q, flavor);
+    (Questions.allergens_q, allergens);
+    (Questions.restrict_q, restrict);
+    (Questions.time_q, time);
+    (Questions.serving_q, serving);
+  ]
+
+let selections_tests =
+  [
+    ( "a full selection" >:: fun _ ->
+      let a =
+        Questions.selections_to_answers
+          (sel ~flavor:[ "Savory" ] ~allergens:[ "Dairy"; "Nuts" ]
+             ~restrict:[ "Halal" ] ~time:[ "Under 2 hours" ] ~serving:[ "6" ]
+             ())
+      in
+      assert_equal Answers.Savory (Answers.get_flavor a);
+      assert_equal ~printer:print_list [ "dairy"; "nuts" ]
+        (Answers.get_allergens a);
+      assert_equal ~printer:print_list [ "halal" ] (Answers.get_restrict a);
+      assert_equal ~printer:string_of_int 120 (Answers.get_time a);
+      assert_equal ~printer:string_of_int 6 (Answers.get_serving a) );
+    ( "gives the same answers as to_answers" >:: fun _ ->
+      let a =
+        Questions.selections_to_answers
+          (sel ~flavor:[ "No preference" ] ~allergens:[ "Eggs" ]
+             ~restrict:[ "Vegan" ] ~time:[ "Doesn't matter" ] ~serving:[ "12" ]
+             ())
+      in
+      let b =
+        ans ~flavor:"No preference" ~allergens:[ "Eggs" ] ~restrict:[ "Vegan" ]
+          ~time:"Doesn't matter" ~serving:"12" ()
+      in
+      assert_equal (Answers.get_flavor b) (Answers.get_flavor a);
+      assert_equal (Answers.get_allergens b) (Answers.get_allergens a);
+      assert_equal (Answers.get_restrict b) (Answers.get_restrict a);
+      assert_equal (Answers.get_time b) (Answers.get_time a);
+      assert_equal (Answers.get_serving b) (Answers.get_serving a) );
+    ( "order of the pairs doesn't matter" >:: fun _ ->
+      let a =
+        Questions.selections_to_answers
+          (List.rev (sel ~flavor:[ "Savory" ] ~time:[ "Under 30 minutes" ] ()))
+      in
+      assert_equal Answers.Savory (Answers.get_flavor a);
+      assert_equal ~printer:string_of_int 30 (Answers.get_time a) );
+    ( "nothing checked gives [] for both checkbox questions" >:: fun _ ->
+      let a =
+        Questions.selections_to_answers (sel ~allergens:[] ~restrict:[] ())
+      in
+      assert_equal ~printer:print_list [] (Answers.get_allergens a);
+      assert_equal ~printer:print_list [] (Answers.get_restrict a) );
+    ( "None of these gives [] for both checkbox questions" >:: fun _ ->
+      let a =
+        Questions.selections_to_answers
+          (sel ~allergens:[ "None of these" ] ~restrict:[ "None of these" ] ())
+      in
+      assert_equal ~printer:print_list [] (Answers.get_allergens a);
+      assert_equal ~printer:print_list [] (Answers.get_restrict a) );
+    ( "works like Display: loop over questions, take each first choice"
+    >:: fun _ ->
+      (* Same shape Display builds: one pair per question in
+         [Questions.questions], with no question named. *)
+      let pick q =
+        match Questions.get_style q with
+        | Questions.Checkboxes -> []
+        | Questions.Buttons | Questions.Dropdown -> [ List.hd (Questions.get_choices q) ]
+      in
+      let a =
+        Questions.selections_to_answers
+          (List.map (fun q -> (q, pick q)) Questions.questions)
+      in
+      assert_equal Answers.Sweet (Answers.get_flavor a);
+      assert_equal ~printer:print_list [] (Answers.get_allergens a);
+      assert_equal ~printer:string_of_int 30 (Answers.get_time a);
+      assert_equal ~printer:string_of_int 1 (Answers.get_serving a) );
+    ( "two labels for a single-choice question raises" >:: fun _ ->
+      assert_raises
+        (Invalid_argument "Needs exactly one choice, given multiple")
+        (fun () ->
+          Questions.selections_to_answers (sel ~flavor:[ "Sweet"; "Savory" ] ()))
+    );
+    ( "no label for a single-choice question raises" >:: fun _ ->
+      assert_raises
+        (Invalid_argument "Needs exactly one choice, given multiple")
+        (fun () -> Questions.selections_to_answers (sel ~time:[] ())) );
+    ( "a missing question raises Not_found" >:: fun _ ->
+      let missing_serving =
+        List.filter (fun (q, _) -> q != Questions.serving_q) (sel ())
+      in
+      assert_raises Not_found (fun () ->
+          Questions.selections_to_answers missing_serving) );
+  ]
+
 let tests =
   "recipebook"
   >::: [
          "questions" >::: question_tests;
          "to_answers" >::: to_answers_tests;
+         "selections_to_answers" >::: selections_tests;
          "answers" >::: answers_tests;
        ]
 

@@ -72,3 +72,14 @@ let to_answers ~flavor ~allergens ~restrict ~time ~serving =
     ~restrict:(parse_multiple Answers.restrict_options restrict)
     ~time:(parse Answers.time_options time)
     ~serving:(parse Answers.serving_options serving)
+
+let selections_to_answers sel =
+  let multi_ans q = List.assq q sel in
+  let single_ans q =
+    match multi_ans q with
+    | [ label ] -> label
+    | _ -> invalid_arg "Needs exactly one choice, given multiple"
+  in
+  to_answers ~flavor:(single_ans flavor_q) ~allergens:(multi_ans allergens_q)
+    ~restrict:(multi_ans restrict_q) ~time:(single_ans time_q)
+    ~serving:(single_ans serving_q)
